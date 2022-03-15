@@ -17,3 +17,12 @@ git add .; git tag -a "8.2" -m "8.2"; git commit -am "8.2"; git status; git tag 
 ```
 
 Pohjille tiedosto [library-backend.js](https://github.com/fullstack-hy2020/misc/blob/master/library-backend.js)
+
+## Tehtävä 1
+
+```GraphQL
+query Query {
+  bookCount
+  authorCount
+}
+```
