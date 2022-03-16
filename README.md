@@ -72,3 +72,24 @@ query {
     title
   }
 }
+```
+
+## Tehtävä 5
+
+```GraphQL
+query {
+  allBooks(genre: "refactoring") {
+    title
+    author
+  }
+}
+```
+
+```GraphQL
+query {
+  allBooks(author: "Robert Martin", genre: "refactoring") {
+    title
+    author
+  }
+}
+```
