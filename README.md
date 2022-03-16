@@ -52,6 +52,7 @@ query {
   }
 }
 ```
+
 ## Tehtävä 3
 
 ```GraphQL
@@ -62,3 +63,12 @@ query {
   }
 }
 ```
+
+## Tehtävä 4
+
+```GraphQL
+query {
+  allBooks(author: "Robert Martin") {
+    title
+  }
+}
