@@ -132,7 +132,7 @@ mutation {
 
 ```GraphQL
 mutation {
-  editAuthor(name: "Risto Jussil", setBornTo: 1958) {
+  editAuthor(name: "Risto Jussila", setBornTo: 1958) {
     name
     born
   }
