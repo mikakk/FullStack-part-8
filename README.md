@@ -127,3 +127,14 @@ mutation {
   }
 }
 ```
+
+## Tehtävä 7
+
+```GraphQL
+mutation {
+  editAuthor(name: "Risto Jussil", setBornTo: 1958) {
+    name
+    born
+  }
+}
+```

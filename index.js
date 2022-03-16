@@ -86,7 +86,7 @@ let books = [
   },
   {
     title: "Kuningasmetsuri",
-    published: 1872,
+    published: 2019,
     author: "Risto Jussila",
     id: "3aa1fee0-a529-11ec-8e75-251225e08140",
     genres: ["biography"],
@@ -120,6 +120,10 @@ const typeDefs = gql`
       published: Int!
       genres: [String!]!
     ): Book
+    editAuthor(
+      name: String!
+      setBornTo: Int!
+    ): Author
   }
 `;
 
@@ -153,6 +157,15 @@ const resolvers = {
       const book = { ...args, id: uuid() };
       books = books.concat(book);
       return book;
+    },
+    editAuthor: (root, args) => {
+      const author = authors.find((a) => a.name === args.name);
+      if (!author) {
+        return null;
+      }
+      const updatedAuthor = { ...author, born: args.setBornTo };
+      authors = authors.map((a) => (a.name === args.name ? updatedAuthor : a));
+      return updatedAuthor;
     },
   },
   Author: {
