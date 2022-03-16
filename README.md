@@ -93,3 +93,37 @@ query {
   }
 }
 ```
+
+## Tehtävä 6
+
+Lisää uusi kirja olemassa olevalle kirjailijalle:  
+
+```GraphQL
+mutation {
+  addBook(
+    title: "NoSQL Distilled",
+    author: "Martin Fowler",
+    published: 2012,
+    genres: ["database", "nosql"]
+  ) {
+    title,
+    author
+  }
+}
+```
+
+Lisää uusi kirja ja kirjailija:  
+
+```GraphQL
+mutation {
+  addBook(
+    title: "Einari",
+    author: "Antti Heikkinen",
+    published: 2020,
+    genres: ["biography"]
+  ) {
+    title,
+    author
+  }
+}
+```
