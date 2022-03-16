@@ -18,7 +18,7 @@ Avaa [sandbox](https://studio.apollographql.com/sandbox/explorer)
 lisääminen Git:
 
 ```sh
-tag="8.2"; git add .; git commit -am $tag; git tag -a $tag -m $tag; git status; git tag -l
+tag="8.2-1"; git add .; git commit -am $tag; git tag -a $tag -m $tag; git push; git status; git tag -l; 
 ```
 
 Lisääminen GitHubiin:
@@ -34,7 +34,7 @@ Pohjille tiedosto [library-backend.js](https://github.com/fullstack-hy2020/misc/
 ## Tehtävä 1
 
 ```GraphQL
-query Query {
+query {
   bookCount
   authorCount
 }
@@ -49,6 +49,16 @@ query {
     author
     published
     genres
+  }
+}
+```
+## Tehtävä 3
+
+```GraphQL
+query {
+  allAuthors {
+    name
+    bookCount
   }
 }
 ```
