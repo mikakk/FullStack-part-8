@@ -25,8 +25,8 @@ Lisääminen GitHubiin:
 
 ```sh
 git remote add origin https://github.com/mikakk/FullStack-part-8.git
-/i/dev/2018/FullStack-kurssi/part-8-exercise$ git branch -M main
-/i/dev/2018/FullStack-kurssi/part-8-exercise$ git push -u origin main
+git branch -M main
+git push -u origin main
 ```
 
 Pohjille tiedosto [library-backend.js](https://github.com/fullstack-hy2020/misc/blob/master/library-backend.js)
